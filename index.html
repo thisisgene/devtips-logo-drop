@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: #fafafa;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh
+    }
+    .logo {
+      width: 500px;
+      perspective: 1000;
+      animation: drop-in 1000ms ease-out;
+      
+    }
+
+    @keyframes drop-in {
+      0% {
+        transform: scale(10) rotateZ(0) 
+      }
+      30% {
+        transform: scale(.9) rotateZ(108deg)
+      }
+      50% {
+        transform: scale(1) rotateZ(180deg)
+      }
+      60% {
+        transform: scale(1.05) rotateZ(216deg) 
+      }
+      /* 80% {
+        transform: scale(1) rotateZ(302deg)
+      } */
+      100% {
+        transform: scale(1) rotateZ(360deg) 
+        
+      }
+
+    }
+      
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img class='logo' src='./logo.svg' />
+  </div>
+</body>
+</html>
